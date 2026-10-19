@@ -1,0 +1,315 @@
+{
+  "terms": [
+    "software house",
+    "software company",
+    "IT company",
+    "software development company"
+  ],
+  "cities": {
+    "lahore": {
+      "name": "Lahore",
+      "zoom": 14,
+      "areas": [
+        {
+          "name": "Gulberg",
+          "lat": 31.516,
+          "lng": 74.348
+        },
+        {
+          "name": "Johar Town",
+          "lat": 31.4697,
+          "lng": 74.2728
+        },
+        {
+          "name": "DHA",
+          "lat": 31.474,
+          "lng": 74.406
+        },
+        {
+          "name": "Model Town",
+          "lat": 31.4834,
+          "lng": 74.3236
+        },
+        {
+          "name": "Arfa Software Technology Park",
+          "lat": 31.4996,
+          "lng": 74.329
+        },
+        {
+          "name": "Garden Town",
+          "lat": 31.5015,
+          "lng": 74.3195
+        },
+        {
+          "name": "Faisal Town",
+          "lat": 31.479,
+          "lng": 74.305
+        },
+        {
+          "name": "Township",
+          "lat": 31.452,
+          "lng": 74.302
+        },
+        {
+          "name": "Bahria Town",
+          "lat": 31.37,
+          "lng": 74.18
+        },
+        {
+          "name": "Cantt",
+          "lat": 31.51,
+          "lng": 74.387
+        },
+        {
+          "name": "Wapda Town",
+          "lat": 31.432,
+          "lng": 74.265
+        },
+        {
+          "name": "Allama Iqbal Town",
+          "lat": 31.513,
+          "lng": 74.286
+        },
+        {
+          "name": "Valencia Town",
+          "lat": 31.406,
+          "lng": 74.239
+        },
+        {
+          "name": "Shadman",
+          "lat": 31.54,
+          "lng": 74.333
+        },
+        {
+          "name": "Cavalry Ground",
+          "lat": 31.5,
+          "lng": 74.37
+        }
+      ]
+    },
+    "karachi": {
+      "name": "Karachi",
+      "zoom": 14,
+      "areas": [
+        {
+          "name": "Shahrah-e-Faisal",
+          "lat": 24.864,
+          "lng": 67.075
+        },
+        {
+          "name": "PECHS",
+          "lat": 24.87,
+          "lng": 67.064
+        },
+        {
+          "name": "Clifton",
+          "lat": 24.8138,
+          "lng": 67.03
+        },
+        {
+          "name": "DHA",
+          "lat": 24.8,
+          "lng": 67.065
+        },
+        {
+          "name": "Gulshan-e-Iqbal",
+          "lat": 24.92,
+          "lng": 67.095
+        },
+        {
+          "name": "North Nazimabad",
+          "lat": 24.942,
+          "lng": 67.04
+        },
+        {
+          "name": "Saddar",
+          "lat": 24.856,
+          "lng": 67.023
+        },
+        {
+          "name": "I.I. Chundrigar Road",
+          "lat": 24.849,
+          "lng": 67.005
+        },
+        {
+          "name": "Tariq Road",
+          "lat": 24.872,
+          "lng": 67.06
+        },
+        {
+          "name": "Bahadurabad",
+          "lat": 24.883,
+          "lng": 67.07
+        },
+        {
+          "name": "Korangi",
+          "lat": 24.83,
+          "lng": 67.12
+        },
+        {
+          "name": "Gulistan-e-Jauhar",
+          "lat": 24.91,
+          "lng": 67.125
+        },
+        {
+          "name": "Federal B Area",
+          "lat": 24.933,
+          "lng": 67.075
+        },
+        {
+          "name": "NASTP Silicon",
+          "lat": 24.873,
+          "lng": 67.13
+        },
+        {
+          "name": "Karsaz",
+          "lat": 24.88,
+          "lng": 67.095
+        }
+      ]
+    },
+    "islamabad": {
+      "name": "Islamabad",
+      "zoom": 14,
+      "areas": [
+        {
+          "name": "Blue Area",
+          "lat": 33.71,
+          "lng": 73.06
+        },
+        {
+          "name": "F-7",
+          "lat": 33.72,
+          "lng": 73.055
+        },
+        {
+          "name": "F-11",
+          "lat": 33.683,
+          "lng": 72.988
+        },
+        {
+          "name": "I-8",
+          "lat": 33.668,
+          "lng": 73.076
+        },
+        {
+          "name": "I-9",
+          "lat": 33.658,
+          "lng": 73.05
+        },
+        {
+          "name": "G-11",
+          "lat": 33.669,
+          "lng": 72.999
+        },
+        {
+          "name": "E-11",
+          "lat": 33.699,
+          "lng": 72.975
+        },
+        {
+          "name": "DHA Islamabad",
+          "lat": 33.53,
+          "lng": 73.16
+        },
+        {
+          "name": "H-12 NUST Science Park",
+          "lat": 33.643,
+          "lng": 72.99
+        }
+      ]
+    },
+    "rawalpindi": {
+      "name": "Rawalpindi",
+      "zoom": 14,
+      "areas": [
+        {
+          "name": "Saddar",
+          "lat": 33.5973,
+          "lng": 73.0479
+        },
+        {
+          "name": "Satellite Town",
+          "lat": 33.638,
+          "lng": 73.07
+        },
+        {
+          "name": "Murree Road",
+          "lat": 33.617,
+          "lng": 73.066
+        },
+        {
+          "name": "Bahria Town",
+          "lat": 33.533,
+          "lng": 73.116
+        },
+        {
+          "name": "Chaklala / Old Airport Road",
+          "lat": 33.6,
+          "lng": 73.1
+        },
+        {
+          "name": "Westridge",
+          "lat": 33.605,
+          "lng": 73.025
+        },
+        {
+          "name": "Gulraiz",
+          "lat": 33.585,
+          "lng": 73.12
+        }
+      ]
+    },
+    "faisalabad": {
+      "name": "Faisalabad",
+      "zoom": 14,
+      "areas": [
+        {
+          "name": "D Ground",
+          "lat": 31.418,
+          "lng": 73.079
+        },
+        {
+          "name": "Kohinoor City",
+          "lat": 31.415,
+          "lng": 73.1
+        },
+        {
+          "name": "Madina Town",
+          "lat": 31.44,
+          "lng": 73.112
+        },
+        {
+          "name": "Susan Road",
+          "lat": 31.425,
+          "lng": 73.1
+        },
+        {
+          "name": "Civil Lines",
+          "lat": 31.427,
+          "lng": 73.083
+        },
+        {
+          "name": "Peoples Colony",
+          "lat": 31.405,
+          "lng": 73.085
+        },
+        {
+          "name": "Gulberg",
+          "lat": 31.405,
+          "lng": 73.095
+        },
+        {
+          "name": "Satiana Road",
+          "lat": 31.39,
+          "lng": 73.08
+        },
+        {
+          "name": "Jinnah Colony",
+          "lat": 31.422,
+          "lng": 73.07
+        }
+      ]
+    }
+  }
+}

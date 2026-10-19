@@ -1,0 +1,63 @@
+{
+  "name": "Your Name",
+  "email": "you@example.com",
+  "phone": "+92 300 0000000",
+  "github": "github.com/your-handle",
+  "home_city": "Lahore",
+  "target_city": "Lahore",
+  "years_experience": 2,
+  "headline": "Full-stack engineer, about 2 years building web apps",
+  "employer": "Your Company",
+  "pitch_points": [
+    "one concrete thing you built and its result",
+    "another, with a number if you have one"
+  ],
+  "candidate_summary": "~2y full-stack engineer (TypeScript, React/Next, Node/Express, Postgres). Wants product or foreign-client companies; remote or Lahore.",
+  "email_intro": "a full-stack engineer at Your Company, where for about two years I have built web apps in TypeScript, React/Next.js and Node.",
+  "email_ask": "Do you have room for a full-stack engineer, remote or in Lahore? I have attached my CV and I am happy to do a technical round.",
+  "pay_floor_pkr": 120000,
+  "skills": {
+    "core": [
+      "typescript",
+      "javascript",
+      "react",
+      "next.js",
+      "node.js",
+      "express",
+      "postgresql",
+      "mongodb",
+      "redis",
+      "bullmq",
+      "rest api"
+    ],
+    "ai": [
+      "llm",
+      "openai",
+      "azure openai",
+      "mastra",
+      "agents",
+      "agentic",
+      "genai",
+      "generative ai",
+      "rag",
+      "langchain",
+      "prompt engineering"
+    ],
+    "secondary": [
+      "python",
+      "docker",
+      "kubernetes",
+      "github actions",
+      "prisma",
+      "mongoose",
+      "mysql",
+      "socket.io",
+      "tailwind",
+      "redux",
+      "stripe",
+      "aws"
+    ]
+  },
+  "never_claim": [],
+  "already_contacted": []
+}

@@ -1,0 +1,9 @@
+node_modules/
+data/
+
+# personal: kept locally, never pushed
+config/profile.local.json
+CLAUDE.md
+PROJECT.md
+.claude/
+docs/recommendation-drafts.md

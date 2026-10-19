@@ -1,0 +1,27 @@
+{
+  "cities": {
+    "lahore": 1185,
+    "karachi": 1184,
+    "islamabad": 1180,
+    "rawalpindi": 1190,
+    "faisalabad": 1181
+  },
+  "queries": [
+    "mern",
+    "react",
+    "node js",
+    "full stack",
+    "ai engineer",
+    "software engineer"
+  ],
+  "maxPagesPerQuery": 2,
+  "maxRequestsPerRun": 12,
+  "delayMinMs": 8000,
+  "delayMaxMs": 16000,
+  "closeAfterDays": 3,
+  "minHoursBetweenRuns": 20,
+  "rotation": [
+    "lahore",
+    "faisalabad"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "pk-job-radar",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Finds engineering jobs on Pakistani software-company career pages and ATS feeds, scores them, and builds a cold-email list.",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "collect": "node --disable-warning=ExperimentalWarning src/collect/maps.js",
+    "collect:reparse": "node --disable-warning=ExperimentalWarning src/collect/reparse.js",
+    "discover": "node --disable-warning=ExperimentalWarning src/discover/run.js",
+    "discover:apply": "node --disable-warning=ExperimentalWarning src/discover/apply.js",
+    "watch": "node --disable-warning=ExperimentalWarning src/watch/run.js",
+    "watch:apply": "node --disable-warning=ExperimentalWarning src/watch/apply.js",
+    "rescore": "node --disable-warning=ExperimentalWarning src/cli/rescore.js",
+    "status": "node --disable-warning=ExperimentalWarning src/cli/status.js",
+    "export": "node --disable-warning=ExperimentalWarning src/cli/export.js",
+    "dashboard": "node --disable-warning=ExperimentalWarning src/server/server.js",
+    "test": "node --disable-warning=ExperimentalWarning --test 'test/*.test.js'",
+    "backup": "node --disable-warning=ExperimentalWarning src/lib/backup.js",
+    "recheck": "node --disable-warning=ExperimentalWarning src/discover/recheck.js",
+    "packets": "node --disable-warning=ExperimentalWarning src/cli/packets.js",
+    "rozee": "node --disable-warning=ExperimentalWarning src/rozee/run.js"
+  },
+  "dependencies": {
+    "cheerio": "^1.0.0",
+    "express": "^4.21.2",
+    "puppeteer": "^23.11.1",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
+  }
+}

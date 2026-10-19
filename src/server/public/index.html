@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PK Job Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600&family=Fira+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e40af' stroke-width='2.2' stroke-linecap='round'%3E%3Cpath d='M19.07 4.93A10 10 0 0 0 6.99 3.34'/%3E%3Cpath d='M4 6h.01'/%3E%3Cpath d='M2.29 9.62A10 10 0 1 0 21.31 8.35'/%3E%3Cpath d='M16.24 7.76A6 6 0 1 0 8.23 16.67'/%3E%3Cpath d='M12 18h.01'/%3E%3Cpath d='M17.99 11.66A6 6 0 0 1 15.77 16.67'/%3E%3Ccircle cx='12' cy='12' r='2'/%3E%3Cpath d='m13.41 10.59 5.66-5.66'/%3E%3C/svg%3E" />
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M19.07 4.93A10 10 0 0 0 6.99 3.34"/><path d="M4 6h.01"/><path d="M2.29 9.62A10 10 0 1 0 21.31 8.35"/><path d="M16.24 7.76A6 6 0 1 0 8.23 16.67"/><path d="M12 18h.01"/><path d="M17.99 11.66A6 6 0 0 1 15.77 16.67"/><circle cx="12" cy="12" r="2"/><path d="m13.41 10.59 5.66-5.66"/></svg></span>
+      <div>
+        <h1>PK Job Radar</h1>
+        <p class="sub" id="lastRun">Loading…</p>
+      </div>
+    </div>
+    <div class="top-actions">
+      <a class="btn ghost" href="/export.csv" download aria-label="Export jobs as CSV"><svg class="i" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/><path d="M12 15V3"/></svg><span>CSV</span></a>
+      <button class="btn ghost icon" id="themeBtn" type="button" aria-label="Toggle dark mode"><svg class="i" viewBox="0 0 24 24"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></button>
+    </div>
+  </header>
+
+  <main id="main">
+    <div id="pending"></div>
+    <section class="funnel" id="funnel" aria-label="Pipeline funnel"></section>
+
+    <nav class="tabs" role="tablist" aria-label="Views">
+      <button role="tab" class="tab" data-tab="jobs" aria-selected="true">Jobs <span class="count" id="cJobs"></span></button>
+      <button role="tab" class="tab" data-tab="companies" aria-selected="false">Companies <span class="count" id="cCompanies"></span></button>
+      <button role="tab" class="tab" data-tab="outreach" aria-selected="false">Cold email <span class="count" id="cOutreach"></span></button>
+      <button role="tab" class="tab" data-tab="runs" aria-selected="false">Runs</button>
+    </nav>
+
+    <section class="panel" id="tab-jobs" role="tabpanel">
+      <form class="filters" id="jobFilters" onsubmit="return false">
+        <label class="search"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <span class="sr">Search jobs</span><input type="search" name="q" placeholder="Search title, company, skill…" /></label>
+        <div class="seg" role="radiogroup" aria-label="Work mode">
+          <label><input type="radio" name="loc" value="all" checked /><span>All</span></label>
+          <label><input type="radio" name="loc" value="remote" /><span>Remote</span></label>
+          <label><input type="radio" name="loc" value="hybrid" /><span>Hybrid</span></label>
+          <label><input type="radio" name="loc" value="onsite" /><span>On-site</span></label>
+        </div>
+        <label class="field"><span>Status</span>
+          <select name="status">
+            <option value="active" selected>New + saved</option>
+            <option value="new">New</option><option value="saved">Saved</option>
+            <option value="applied">Applied</option><option value="skipped">Skipped</option><option value="all">All</option>
+          </select></label>
+        <label class="field"><span>City</span><select name="city"><option value="all">All</option></select></label>
+        <label class="field"><span>Found via</span>
+          <select name="source"><option value="all" selected>All sources</option><option value="site">Company websites</option><option value="jobboard">Job-board feeds</option><option value="rozee">Rozee.pk</option></select></label>
+        <label class="field"><span>Posted within</span>
+          <select name="maxAge"><option value="1">Today</option><option value="3">3 days</option><option value="7" selected>7 days</option><option value="14">14 days</option><option value="30">30 days</option><option value="0">Any time</option></select></label>
+        <label class="field"><span>Sort</span>
+          <select name="sort"><option value="score" selected>Best match</option><option value="newest">Newest first</option><option value="closing">Closing soon</option></select></label>
+        <label class="check"><input type="checkbox" name="undated" checked /><span>Include undated</span></label>
+        <label class="field range"><span>Min score <b id="minScoreOut">40</b></span><input type="range" name="minScore" min="0" max="100" step="5" value="40" /></label>
+        <label class="check"><input type="checkbox" name="eng" checked /><span>Engineering only</span></label>
+        <label class="check"><input type="checkbox" name="closed" /><span>Show closed</span></label>
+      </form>
+      <div id="newSection"></div>
+      <div class="list-head"><h2>All matches</h2><span id="jobCount" class="muted"></span></div>
+      <div id="jobList" class="cards"></div>
+    </section>
+
+    <section class="panel" id="tab-companies" role="tabpanel" hidden>
+      <form class="filters" id="coFilters" onsubmit="return false">
+        <label class="search"><svg class="i" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          <span class="sr">Search companies</span><input type="search" name="q" placeholder="Search company, stack, notes…" /></label>
+        <label class="field"><span>Hiring</span>
+          <select name="hiring"><option value="all">All</option><option value="live">Live listings</option><option value="hr_email">HR email only</option><option value="stale">Stale page</option><option value="none">No careers page</option><option value="rejected">Not software</option></select></label>
+      </form>
+      <div class="table-wrap"><table class="table" id="coTable"></table></div>
+    </section>
+
+    <section class="panel" id="tab-outreach" role="tabpanel" hidden>
+      <p class="hint">Good-fit companies with an HR inbox and nothing open to apply to. Nothing is ever sent from here: copy the draft, attach your CV, send it yourself, then mark it sent.</p>
+      <div id="outreachList" class="cards two"></div>
+    </section>
+
+    <section class="panel" id="tab-runs" role="tabpanel" hidden>
+      <div class="table-wrap"><table class="table" id="runTable"></table></div>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
