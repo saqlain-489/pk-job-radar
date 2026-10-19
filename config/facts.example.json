@@ -1,0 +1,81 @@
+{
+  "_about": "Copy to config/facts.local.json and fill in. The fact bank is the only source for CVs and application emails.",
+  "updated": "2026-10-19",
+  "contact": {
+    "name": "Your Name",
+    "email": "you@example.com",
+    "phone": "+92 300 0000000",
+    "github": "github.com/your-handle",
+    "github_url": "https://github.com/your-handle",
+    "linkedin": "linkedin.com/in/you",
+    "linkedin_url": "https://www.linkedin.com/in/you/",
+    "home": "Lahore, Pakistan",
+    "location_lines": {
+      "remote_or_onsite": "Lahore, Pakistan (remote, or on-site)"
+    }
+  },
+  "experience": {
+    "current": {
+      "employer": "Your Company",
+      "dates": "Jan 2024 -- Present",
+      "place": "Pakistan",
+      "title_options": [
+        "Full-Stack Developer"
+      ],
+      "intro": "What you build there, in one line.",
+      "years_text": "about 2 years"
+    },
+    "freelance": {
+      "title": "Freelance Web Developer",
+      "employer": "Self-employed",
+      "dates": "1 year",
+      "place": "Remote",
+      "facts": [
+        "One true line."
+      ]
+    }
+  },
+  "projects": [
+    {
+      "id": "example",
+      "fact": "One thing you built, plainly.",
+      "numbers": "Its measurable result.",
+      "keywords": [
+        "React",
+        "Node.js"
+      ]
+    }
+  ],
+  "skills": {
+    "used": [
+      "React",
+      "Node.js"
+    ],
+    "never": [
+      "GraphQL"
+    ],
+    "never_note": ""
+  },
+  "confirmed": [],
+  "unconfirmed": [],
+  "education": "Self-taught software developer: production experience and online certifications in place of a formal degree.",
+  "languages": "Urdu (native), English (professional).",
+  "answers": {
+    "expected_salary_pkr": null,
+    "current_salary_pkr": null,
+    "notice_period": null,
+    "pay_floor_pkr": 100000,
+    "relocation": null,
+    "shift": null,
+    "work_mode_preference": null
+  },
+  "never_phrases": [],
+  "rules": [
+    "One page, single column, plain headings, no tables or icons.",
+    "Name the employer exactly as in experience.current; never use a phrase from never_phrases.",
+    "No degree claimed; no age, date of birth or photo.",
+    "Only skills in skills.used; never anything in skills.never.",
+    "Items in 'unconfirmed' only after Saqlain confirms; list them in notes_for_saqlain when used.",
+    "Plain, human sentences. No buzzword stacks."
+  ]
+}

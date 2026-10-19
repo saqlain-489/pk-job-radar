@@ -128,7 +128,27 @@ CREATE TABLE IF NOT EXISTS runs (
   stats TEXT NOT NULL DEFAULT '{}',
   message TEXT
 );
+CREATE TABLE IF NOT EXISTS applications (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  run_id TEXT NOT NULL,
+  company_id INTEGER NOT NULL REFERENCES companies(id),
+  job_ids TEXT NOT NULL DEFAULT '[]',
+  status TEXT NOT NULL,
+  reason TEXT,
+  apply_via TEXT,
+  apply_url TEXT,
+  email_to TEXT,
+  email_found_at TEXT,
+  email_confidence TEXT,
+  subject TEXT,
+  body TEXT,
+  cv_path TEXT,
+  folder TEXT,
+  created_at TEXT NOT NULL,
+  sent_at TEXT
+);
 CREATE INDEX IF NOT EXISTS jobs_company ON jobs(company_id);
+CREATE INDEX IF NOT EXISTS applications_company ON applications(company_id);
 CREATE INDEX IF NOT EXISTS jobs_first_seen ON jobs(first_seen);
 CREATE INDEX IF NOT EXISTS places_company ON places(company_id);
 `;

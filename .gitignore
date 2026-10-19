@@ -3,7 +3,9 @@ data/
 
 # personal: kept locally, never pushed
 config/profile.local.json
+config/facts.local.json
 CLAUDE.md
 PROJECT.md
 .claude/
 docs/recommendation-drafts.md
+applications/

@@ -22,7 +22,9 @@
     "backup": "node --disable-warning=ExperimentalWarning src/lib/backup.js",
     "recheck": "node --disable-warning=ExperimentalWarning src/discover/recheck.js",
     "packets": "node --disable-warning=ExperimentalWarning src/cli/packets.js",
-    "rozee": "node --disable-warning=ExperimentalWarning src/rozee/run.js"
+    "rozee": "node --disable-warning=ExperimentalWarning src/rozee/run.js",
+    "pack": "node --disable-warning=ExperimentalWarning src/apply/pack.js",
+    "pack:apply": "node --disable-warning=ExperimentalWarning src/apply/apply.js"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
