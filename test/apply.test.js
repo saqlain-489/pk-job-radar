@@ -3,6 +3,7 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import { spawnSync } from 'node:child_process';
 
 const tmp = fs.mkdtempSync(path.join(os.tmpdir(), 'radar-apply-'));
 process.env.RADAR_DATA_DIR = tmp;
@@ -87,7 +88,10 @@ test('candidates: grouped by company, fresh only, skip applied companies and low
   assert.deepEqual(pickCandidates({ jobIds: ['b1'] }).map((c) => c.name), ['Beta']);
 });
 
-test('pack:apply builds a one-page PDF and refuses never-claim skills', async () => {
+// CI runners have no TeX install; the PDF test runs wherever lualatex does.
+const HAS_LATEX = spawnSync('lualatex', ['--version'], { stdio: 'ignore' }).status === 0;
+
+test('pack:apply builds a one-page PDF and refuses never-claim skills', { skip: HAS_LATEX ? false : 'lualatex is not installed' }, async () => {
   const runId = 'pack-test';
   const companies = pickCandidates({ top: 10 });
   for (const c of companies) for (const j of c.jobs) j.full_text = j.description;
